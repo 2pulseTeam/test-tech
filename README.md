@@ -18,6 +18,12 @@
 ### Callbacks
 - Possibilité de fournir des callbacks **optionnels** : `onSuccess` et `onError`.
 
+### To promise
+- Possibilité de transformer le retour en promesse afin de traiter le résultat de façon "synchrone"
+
+### Abort
+- Possibilité d'annuler ( abort ) un call HTTP en cours
+
 ### Typage
 - **Typage** pour :
   - Les données en retour (`data`).
@@ -25,10 +31,7 @@
 
 ---
 
-## Fonctionnalités principales
-
-### 1. Déclencher une mutation asynchrone et gérer le résultat ou l'erreur
-Le hook permet de fournir des callbacks `onSuccess` et `onError` pour traiter respectivement le succès ou l'échec de la requête.
+## API et exemples
 
 ```typescript
 const [mutation, { isLoading }] = useMutation({
