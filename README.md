@@ -31,6 +31,7 @@
 ## API et exemples
 
 ```typescript
+// Possibilité de typé Data et le Body de la mutation, directement au niveau du hook
 const [mutation, { isLoading }] = useMutation({
   url: '/posts',
   method: 'POST', // Méthode par défaut
