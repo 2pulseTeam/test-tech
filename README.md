@@ -8,9 +8,6 @@
 
 ## Fonctionnalités attendues
 
-### Configurations
-- **Partager une configuration globale** entre tous les hooks (exemple : `baseUrl` pour le test).
-
 ### Méthodes autorisées
 - Accepte uniquement les méthodes **POST**, **PUT**, et **PATCH**.
 - La méthode par défaut est **POST**.
