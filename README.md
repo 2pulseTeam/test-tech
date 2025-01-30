@@ -17,6 +17,10 @@ Avant de commencer, assurez-vous d'avoir l'environnement suivant :
 - **React** avec **TypeScript**
 - **Axios** (pour gérer les requêtes HTTP et les erreurs)
 
+### API
+
+L'Url API de test est : https://jsonplaceholder.typicode.com/posts
+
 ---
 
 ## 🎯 Fonctionnalités attendues
@@ -55,6 +59,14 @@ Le hook doit offrir un moyen de gérer les requêtes de manière **synchrone** g
 
 👉 Cela permet aux développeurs de traiter les mutations de manière plus **déclarative**, sans dépendre uniquement des callbacks.
 
+## 🎁 Bonus : Provider pour définir une `baseUrl`
+
+Pour aller plus loin, vous pouvez implémenter un **Provider React** permettant de définir une `baseUrl` (exemple: https://jsonplaceholder.typicode.com ) globale pour toutes les requêtes effectuées avec `useMutation`.  
+
+Cela permet :
+- D'éviter de répéter l'URL de base dans chaque mutation.
+- De centraliser la configuration des appels API
+
 ---
 
 ### Exemples d'utilisation de `useMutation` :
@@ -73,7 +85,7 @@ interface Body {
 
 // Définition du hook avec typage des données en entrée et en sortie
 const [mutation, { isLoading }] = useMutation<Data, Body>({
-  url: '/posts',
+  url: 'https://jsonplaceholder.typicode.com/posts',
   method: 'POST',
   onSuccess(data) {
     console.log("onSuccess", { data });
